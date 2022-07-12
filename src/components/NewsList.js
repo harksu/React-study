@@ -29,9 +29,9 @@ const NewsList = ({ category }) => {
       try {
         const query = category === "all" ? "" : `&category=${category}`; //이거 url 맞출 때 공백 조심
         const dataUrl = `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=${apiKey}`; //이거 나중에 전역 처리
-        console.log(dataUrl);
+        //console.log(dataUrl);
         const response = await axios.get(dataUrl);
-        console.log(response); //이건 내 디버깅용
+        //console.log(response); //이건 내 디버깅용
         setArticles(response.data.articles);
       } catch (e) {
         console.log(e);
